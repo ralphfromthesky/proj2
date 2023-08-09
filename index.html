@@ -29,8 +29,8 @@
             <li>Chess</li>
             <li>About Us</li>
             <div class="reg">
-                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#signin">Sign-in</button>
-                <button class="btn btn-danger">Register</button>
+                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#signUp">Sign-in</button>
+                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signin">Register</button>
                 <i class='bx bx-globe' style='color:#d93444; background:none;' type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#language" aria-controls="language"></i>
             </div>
@@ -689,41 +689,47 @@
         <div class="offcanvas offcanvas-end offcanvas-language" tabindex="-1" id="language"
             aria-labelledby="languageLabel">
             <div class="offcanvas-body">
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <i class='bx bx-x-circle' type="button" data-bs-dismiss="offcanvas" aria-label="Close"></i>
                 <button class="btn btn-danger">English</button>
                 <button class="btn btn-danger">Chinese</button>
                 <button class="btn btn-danger">Portugues</button>
             </div>
         </div>
 
-        <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinLabel" aria-hidden="true">
+
+        <div class="modal fade" id="signUp" tabindex="-1" aria-labelledby="signUpLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-
                     <div class="modal-body">
-                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-
                         <div class="form">
+                            <div class="formCancel">
+                                <button type="button" data-bs-dismiss="modal" aria-label="Close"><i
+                                        class='bx bx-x-circle'></i></button>
+                            </div>
                             <div class="title">Welcome</div>
-                            <div class="subtitle">Let's create your account!</div>
+                            <div class="subtitle">Sign in to your account!</div>
 
                             <div class="input-container ic1">
                                 <input placeholder="" type="text" class="input" id="firstname">
                                 <div class="cut"></div>
-                                <label class="iLabel" for="firstname">First name</label>
+                                <label class="iLabel" for="firstname">Account Name</label>
                             </div>
 
                             <div class="input-container ic2">
-                                <input placeholder="" type="text" class="input" id="lastname">
+                                <input placeholder="" type="password" class="input" id="lastname">
                                 <div class="cut"></div>
-                                <label class="iLabel" for="lastname">Last name</label>
+                                <label class="iLabel" for="lastname">Password</label>
                             </div>
                             <div class="input-container ic2">
-                                <input placeholder="" type="text" class="input" id="email">
+                                <input placeholder="" type="password" class="input" id="email">
                                 <div class="cut cut-short"></div>
-                                <label class="iLabel" for="email">Email</label>
+                                <label class="iLabel" for="email">Captcha</label>
                             </div>
                             <button class="submit" type="text">submit</button>
+                            <div style="text-align: center;">
+                                <small style="color: white">No Account? <spans style="color: red">Register
+                                        here</span></small>
+                            </div>
                         </div>
                     </div>
 
@@ -731,11 +737,58 @@
             </div>
         </div>
 
+        <div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="form">
+                            <div class="formCancel">
+                                <button type="button" data-bs-dismiss="modal" aria-label="Close"><i
+                                        class='bx bx-x-circle'></i></button>
+                            </div>
+                            <div class="title">Welcome</div>
+                            <div class="subtitle">Let's create your account!</div>
+
+                            <div class="input-container ic1">
+                                <input placeholder="" type="text" class="input" id="firstname">
+                                <div class="cut"></div>
+                                <label class="iLabel" for="firstname">Account Name</label>
+                            </div>
+
+                            <div class="input-container ic2">
+                                <input placeholder="" type="password" class="input" id="lastname">
+                                <div class="cut"></div>
+                                <label class="iLabel" for="lastname">Password</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input placeholder="" type="password" class="input" id="email">
+                                <div class="cut cut-short"></div>
+                                <label class="iLabel" for="email">Confirm Password</label>
+                            </div>
+                            <div class="input-container ic2">
+                                <input placeholder="" type="password" class="input" id="email">
+                                <div class="cut cut-short"></div>
+                                <label class="iLabel" for="email">Captcha</label>
+                            </div>
+                            <button class="submit" type="text">submit</button>
+                            <div style="text-align: center;">
+                                <small style="color: white">Have Account? <spans style="color: red">Sign-in
+                                        here</span></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
     </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
