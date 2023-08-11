@@ -27,9 +27,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+width: 100%;
   position: fixed;
-	width: 100%;
 	top: 0;
 	right: 0;
 	z-index: 1000;
@@ -171,6 +170,7 @@ li {
   align-items: center;
   justify-content: space-evenly;
   overflow-y: hidden !important;
+  border: 2px solid red;
   background-color: #15172b;
 }
 /* modal css */
